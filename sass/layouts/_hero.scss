@@ -1,0 +1,73 @@
+.hero {
+    max-width: 480px;
+    background-color: #c4c4c4;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    text-align: center;
+    background-image:var(--gradient), url(../images/hero-bg-mob.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0 auto;
+    background-size: cover;
+    @include retina {
+        background-image: var(--gradient), url(../images/hero-bg-mob-2x.jpg)
+    }
+    @include tablet {
+        max-width: 768px;
+        background-image: var(--gradient),url(../images/hero-bg-tb.jpg);
+        @include retina {
+        background-image: url(../images/hero-bg-tb-2x.jpg);
+        }
+    }
+        @include desktop {
+            max-width: 1200px;
+            padding-top: 200px;
+            padding-bottom: 200px;
+            background-image: var(--gradient),
+                url(../images/hero-bg.jpg);
+                @include retina{
+                    background-image: var(--gradient), url(../images/hero-bg-2x.jpg)
+                }
+    }
+}
+
+.hero__title {
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 1.6;
+    text-align: center;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--bac-tex-color);
+    margin: 0 auto;
+    width: 360px;
+    @media screen and (min-width:1200px) {
+        width: 696px;
+        font-size: 44px;
+        line-height: 1.36;
+        }
+}
+
+.title__btn {
+    background-color: var(--accent-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    &:focus,
+    &:hover {
+        background-color: var(--focus-btn-color);
+    }
+}
+
+.btn {
+    cursor: pointer;
+    font-family: inherit;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    border-color: transparent;
+    letter-spacing: 0.06em;
+    color: var(--bac-tex-color);
+    padding: 10px 32px;
+    margin-top: 30px;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
