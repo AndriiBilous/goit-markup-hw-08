@@ -1,17 +1,15 @@
-.section__pictures {
-    display: none;
-    @media screen and (min-width:1200px) {
-    display: contents;
-    }
-}
+
 .pictures__image-item {
     display: flex;
     gap: 30px;
 }
 
 .section__pictures {
-    /* padding-top: 47px; */
     padding-bottom: 94px;
+    display: none;
+    @media screen and (min-width:1200px) {
+        display: block;
+    }
 }
 
 .image__title {

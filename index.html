@@ -30,7 +30,7 @@
             ><span class="logo__studio">Studio</span>
           </a>
           <button type="button" class="menu__open js-open-menu">
-            <svg class="mob__icon" width="40" height="40">
+            <svg class="mob__icon" width="24" height="16">
               <use href="./images/icons-svg.svg#icon-menu_480"></use>
             </svg>
           </button>
@@ -49,16 +49,38 @@
         <ul class="conect header__conect list">
           <li class="conect__item">
             <a class="conect__mail link" href="mailto:info@devstudio.com"
-              ><svg class="conect__icon header__icon" width="16" height="12">
+              ><svg
+                class="conect__icon-desctop header__icon"
+                width="16"
+                height="12"
+              >
                 <use href="./images/icons-svg.svg#icon-envelope"></use>
+              </svg>
+              <svg
+                class="conect__icon-tablet header__icon"
+                width="14"
+                height="10"
+              >
+                <use href="./images/icons-svg.svg#icon-mail-tablet"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
           <li class="conect__item">
             <a class="conect__tel link" href="tel:+380961111111"
-              ><svg class="conect__icon header__icon" width="10" height="16">
+              ><svg
+                class="conect__icon-desctop header__icon"
+                width="10"
+                height="16"
+              >
                 <use href="./images/icons-svg.svg#icon-Vector"></use>
+              </svg>
+              <svg
+                class="conect__icon-tablet header__icon"
+                width="10"
+                height="14"
+              >
+                <use href="./images/icons-svg.svg#icon-smartphone-tablet"></use>
               </svg>
               +38 096 111 11 11
             </a>
@@ -75,13 +97,17 @@
             </button>
             <ul class="mob-menu__list list">
               <li class="mob-menu__item">
-                <a href="./index.html" class="mob-menu-link link">Студія</a>
+                <a class="mob-menu-link current link" href="./index.html"
+                  >Студія</a
+                >
               </li>
               <li class="mob-menu__item">
-                <a href="" class="mob-menu-link link">Портфоліо</a>
+                <a href="./portfolio.html" class="mob-menu-link link"
+                  >Портфоліо</a
+                >
               </li>
               <li class="mob-menu__item">
-                <a href="" class="mob-menu-link link">Контакти</a>
+                <a href="#" class="mob-menu-link link">Контакти</a>
               </li>
             </ul>
           </div>
@@ -98,7 +124,7 @@
                     class="mob-contakt-mail link"
                     href="mailto:info@devstudio.com"
                   >
-                    >info@devstudio.com</a
+                    info@devstudio.com</a
                   >
                 </li>
               </ul>
@@ -194,34 +220,52 @@
           <ul class="pictures__image-item">
             <li class="pictures__image-list list">
               <div class="pictures__top-wrap">
-                <img
-                  src="./images/img.jpg"
-                  alt="computer"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img.jpg 1x, ./images/img2x.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    src="./images/img.jpg"
+                    alt="computer"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <p class="pictures__top-tex">Десктопні додатки</p>
               </div>
             </li>
             <li class="pictures__image-list list">
               <div class="pictures__top-wrap">
-                <img
-                  src="./images/img2.jpg"
-                  alt="phone"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img2.jpg 1x, ./images/img-2x2.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    src="./images/img2.jpg"
+                    alt="phone"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <p class="pictures__top-tex">Мобільні додатки</p>
               </div>
             </li>
             <li class="pictures__image-list list">
               <div class="pictures__top-wrap">
-                <img
-                  src="./images/img3.jpg"
-                  alt="tablet"
-                  width="370"
-                  height="294"
-                />
+                <picture>
+                  <source
+                    srcset="./images/img3.jpg 1x, ./images/img-3x2.jpg 2x"
+                    media="(min-width:1200px)"
+                  />
+                  <img
+                    src="./images/img3.jpg"
+                    alt="tablet"
+                    width="370"
+                    height="294"
+                  />
+                </picture>
                 <p class="pictures__top-tex">Дизайнерські рішення</p>
               </div>
             </li>
