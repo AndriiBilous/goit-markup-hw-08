@@ -29,6 +29,11 @@
             <span class="logo__web">Web</span
             ><span class="logo__studio">Studio</span>
           </a>
+          <button type="button" class="menu__open js-open-menu">
+            <svg class="mob__icon" width="24" height="16">
+              <use href="./images/icons-svg.svg#icon-menu_480"></use>
+            </svg>
+          </button>
           <ul class="menu list">
             <li class="menu__item">
               <a class="menu__link link" href="./index.html">Студія</a>
@@ -46,21 +51,104 @@
         <ul class="conect header__conect list">
           <li class="conect__item">
             <a class="conect__mail link" href="mailto:info@devstudio.com"
-              ><svg class="conect__icon header__icon" width="16" height="12">
+              ><svg
+                class="conect__icon-desctop header__icon"
+                width="16"
+                height="12"
+              >
                 <use href="./images/icons-svg.svg#icon-envelope"></use>
+              </svg>
+              <svg
+                class="conect__icon-tablet header__icon"
+                width="14"
+                height="10"
+              >
+                <use href="./images/icons-svg.svg#icon-mail-tablet"></use>
               </svg>
               info@devstudio.com</a
             >
           </li>
           <li class="conect__item">
             <a class="conect__tel link" href="tel:+380961111111"
-              ><svg class="conect__icon header__icon" width="10" height="16">
+              ><svg
+                class="conect__icon-desctop header__icon"
+                width="10"
+                height="16"
+              >
                 <use href="./images/icons-svg.svg#icon-Vector"></use>
+              </svg>
+              <svg
+                class="conect__icon-tablet header__icon"
+                width="10"
+                height="14"
+              >
+                <use href="./images/icons-svg.svg#icon-smartphone-tablet"></use>
               </svg>
               +38 096 111 11 11
             </a>
           </li>
         </ul>
+      </div>
+      <div class="mob__menu js-menu-container">
+        <div class="mob__menu-container">
+          <div class="menu-mob__top">
+            <button type="button" class="menu__close js-close-menu">
+              <svg class="mob__close-icon" width="40" height="40">
+                <use href="./images/icons-svg.svg#icon-menu__close"></use>
+              </svg>
+            </button>
+            <ul class="mob-menu__list list">
+              <li class="mob-menu__item">
+                <a class="mob-menu-link current link" href="./index.html"
+                  >Студія</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="./portfolio.html" class="mob-menu-link link"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="mob-menu__item">
+                <a href="#" class="mob-menu-link link">Контакти</a>
+              </li>
+            </ul>
+          </div>
+          <div class="menu-mob-bottom">
+            <div class="mob-contakt-wrap">
+              <ul class="mob-contakt-list list">
+                <li class="mob-contakt-item">
+                  <a class="mob-contakt-tel link" href="tel:+380961111111"
+                    >+38 096 111 11 11</a
+                  >
+                </li>
+                <li class="mob-contakt-item">
+                  <a
+                    class="mob-contakt-mail link"
+                    href="mailto:info@devstudio.com"
+                  >
+                    info@devstudio.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <div class="mob-sco-wrap">
+              <ul class="mob-soc-list list">
+                <li class="mob-soc-item linne">
+                  <a href="" class="mob-soc-link link">Instagram</a>
+                </li>
+                <li class="mob-soc-item linne">
+                  <a href="" class="mob-soc-link link">Twitter</a>
+                </li>
+                <li class="mob-soc-item linne">
+                  <a href="" class="mob-soc-link link">Facebook</a>
+                </li>
+                <li class="mob-soc-item">
+                  <a href="" class="mob-soc-link link">LinkedIn</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
       </div>
     </header>
     <main>
@@ -92,12 +180,35 @@
             <li class="cards__item list">
               <a class="cards__link link" href="#"
                 ><div class="cards__wrap">
-                  <img
-                    src="./images/portfolio/portfolio1.jpg"
-                    alt="computer"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio1.jpg       1x,
+                        ./images/portfolio/desctop/img-1-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/img-1.jpg    1x,
+                        ./images/portfolio/tablet/img-1-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img-1.jpg    1x,
+                        ./images/portfolio/mob/img-1-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio1.jpg"
+                      alt="computer"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="cards__tex-img">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -113,12 +224,35 @@
             <li class="cards__item list">
               <a class="cards__link link" href="#">
                 <div class="cards__wrap">
-                  <img
-                    src="./images/portfolio/portfolio2.jpg"
-                    alt="basketboll"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio2.jpg       1x,
+                        ./images/portfolio/desctop/img-2-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/img-2.jpg    1x,
+                        ./images/portfolio/tablet/img-2-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img-2.jpg    1x,
+                        ./images/portfolio/mob/img-2-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio2.jpg"
+                      alt="basketboll"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="cards__tex-img">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -136,12 +270,35 @@
             <li class="cards__item list">
               <a class="cards__link link" href="#">
                 <div class="cards__wrap">
-                  <img
-                    src="./images/portfolio/portfolio3.jpg"
-                    alt="fish"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio3.jpg       1x,
+                        ./images/portfolio/desctop/img-3-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/img-3.jpg    1x,
+                        ./images/portfolio/tablet/img-3-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img-3.jpg    1x,
+                        ./images/portfolio/mob/img-3-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio3.jpg"
+                      alt="fish"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="cards__tex-img">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -157,12 +314,35 @@
             <li class="cards__item list">
               <a class="cards__link link" href="#">
                 <div class="cards__wrap">
-                  <img
-                    src="./images/portfolio/portfolio4.jpg"
-                    alt="headphone"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio4.jpg       1x,
+                        ./images/portfolio/desctop/img-4-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/img-4.jpg    1x,
+                        ./images/portfolio/tablet/img-4-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img-4.jpg    1x,
+                        ./images/portfolio/mob/img-4-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio4.jpg"
+                      alt="headphone"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="cards__tex-img">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -178,12 +358,35 @@
             <li class="cards__item list">
               <a class="cards__link link" href="#"
                 ><div class="cards__wrap">
-                  <img
-                    src="./images/portfolio/portfolio5.jpg"
-                    alt="boxes"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio5.jpg       1x,
+                        ./images/portfolio/desctop/img-5-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/img-5.jpg    1x,
+                        ./images/portfolio/tablet/img-5-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img-5.jpg    1x,
+                        ./images/portfolio/mob/img-5-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio5.jpg"
+                      alt="boxes"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="cards__tex-img">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -199,12 +402,35 @@
             <li class="cards__item list">
               <a class="cards__link link" href="#"
                 ><div class="cards__wrap">
-                  <img
-                    src="./images/portfolio/portfolio6.jpg"
-                    alt="monitor"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio6.jpg       1x,
+                        ./images/portfolio/desctop/img-6-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/img-6.jpg    1x,
+                        ./images/portfolio/tablet/img-6-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img-6.jpg    1x,
+                        ./images/portfolio/mob/img-6-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio6.jpg"
+                      alt="monitor"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="cards__tex-img">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -222,12 +448,35 @@
             <li class="cards__item list">
               <a class="cards__link link" href="#"
                 ><div class="cards__wrap">
-                  <img
-                    src="./images/portfolio/portfolio7.jpg"
-                    alt="book"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio7.jpg       1x,
+                        ./images/portfolio/desctop/img-7-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/img-7.jpg    1x,
+                        ./images/portfolio/tablet/img-7-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img-7.jpg    1x,
+                        ./images/portfolio/mob/img-7-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio7.jpg"
+                      alt="book"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="cards__tex-img">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -245,12 +494,35 @@
             <li class="cards__item list">
               <a class="cards__link link" href="#"
                 ><div class="cards__wrap">
-                  <img
-                    src="./images/portfolio/portfolio8.jpg"
-                    alt="badge"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio8.jpg       1x,
+                        ./images/portfolio/desctop/img-8-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/img-8.jpg    1x,
+                        ./images/portfolio/tablet/img-8-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img-8.jpg    1x,
+                        ./images/portfolio/mob/img-8-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio8.jpg"
+                      alt="badge"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="cards__tex-img">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -266,12 +538,35 @@
             <li class="cards__item list">
               <a class="cards__link link" href="#"
                 ><div class="cards__wrap">
-                  <img
-                    src="./images/portfolio/portfolio9.jpg"
-                    alt="laptop"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./images/portfolio/portfolio9.jpg       1x,
+                        ./images/portfolio/desctop/img-9-2x.jpg 2x
+                      "
+                      media="(min-width:1200px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/tablet/img-9.jpg    1x,
+                        ./images/portfolio/tablet/img-9-2x.jpg 2x
+                      "
+                      media="(min-width:768px)"
+                    />
+                    <source
+                      srcset="
+                        ./images/portfolio/mob/img-9.jpg    1x,
+                        ./images/portfolio/mob/img-9-2x.jpg 2x
+                      "
+                      media="(min-width:320px)"
+                    />
+                    <img
+                      src="./images/portfolio/portfolio9.jpg"
+                      alt="laptop"
+                      width="450"
+                      height="294"
+                    />
+                  </picture>
                   <p class="cards__tex-img">
                     Ресурс пропонує комплексні пропозиції з різним рівнем
                     функціоналу та сервісів. Все це дозволить відвідувачу
@@ -397,5 +692,6 @@
         </div>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

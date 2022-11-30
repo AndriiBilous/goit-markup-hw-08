@@ -1,14 +1,24 @@
 .filters {
-    padding-top: 94px;
-    padding-bottom: 94px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    @media screen and (min-width:1200px) {
+        padding-top: 94px;
+        padding-bottom: 94px;
+        
+    }
 }
 
 .button-list {
     display: flex;
-    gap: 8px;
-    justify-content: center;
+    gap: 30px 8px;
+        justify-content: flex-start;
     margin-bottom: 50px;
-}
+    flex-wrap: wrap;
+    @media screen and (min-width:768px) {
+            justify-content: center;
+            gap: 8px;
+        }
+    }
 
 .filters__btn {
     background: var(--bac-our-color);
@@ -28,7 +38,6 @@
     font-weight: 500;
     font-size: 16px;
     line-height: 1.62;
-    /* identical to box height, or 162% */
     text-align: center;
     letter-spacing: 0.03em;
     color: var(--header-list-color);
